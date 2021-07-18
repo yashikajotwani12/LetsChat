@@ -5,16 +5,18 @@
 <style>
 body {
   margin: 0 auto;
-  max-width: 800px;
-  padding: 0 20px;
+  /* max-width: 800px; */
+  /* padding: 0 20px; */
+  background: #263238;
 }
 
 .container {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+  border: 2px solid #263238;
+  background: #263238;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    height: 100%;
 }
 
 .darker {
@@ -55,9 +57,14 @@ body {
 </head>
 <body>
 
-<div align="center">
-    <h2>Lets Chat</h2>
+<div style="text-align: center; background: #546e7a;padding: 1rem;" >
+  <div class="heading" style="background: #455a64;">
+    <h2 style="color: white; font-size: 2rem;">Lets Chat</h2>
+
+  </div>
+   
 </div>
+
 
 
 <div class="container">
@@ -69,12 +76,13 @@ body {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1.3rem;
     box-sizing: border-box;
     }
 
     input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #263238;;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -84,7 +92,7 @@ body {
     }
 
     input[type=submit]:hover {
-    background-color: #45a049;
+    background-color:#455a64;
     }
 
     div {
@@ -92,16 +100,77 @@ body {
     background-color: #f2f2f2;
     padding: 20px;
     }
-    </style>
+    .chat{
+      display: flex;
+      background: #546e7a;
+     
+    }
+    .roomnames, .roomdetails{
+      background: #455a6470;
+    }
+    .roomnames p{
+      color: white;
+      font-size: 1.5rem;
+      
 
-    <form id="post-form" method="POST" action="checkview">
-        {% csrf_token %}
-        <label>Room Name</label>
-        <input type="text" name="room_name" id="room_name" width="100px" />
-        <label>Username</label>
-        <input type="text" name="username" id="username" width="100px" />
-        <input type="submit" value="Enter Room">
-    </form>
+    }
+    .roomdetails label{
+      color: white;
+      font-size: 1.5rem;
+    }
+    .leftside{
+      flex: 0.5;
+    margin: 1rem;
+    border: 2px solid #37474f;
+    background: linear-gradient( hsl(0 0% 0% / 0), hsl(0 0% 0% / 0.3) 20% ,#263238 );
+    }
+    .rightside{
+      flex: 0.5;
+    margin: 1rem;
+    border: 2px solid #37474f;
+    background: linear-gradient( hsl(0 0% 0% / 0), hsl(0 0% 0% / 0.3) 20% ,#263238 );
+    }
+    
+    .rightside h1{
+      color: white;
+    }
+    .leftside h1{
+      color: white;
+    }
+    </style>
+    <div class="chat">
+      <div class="leftside">
+        <h1>Rooms</h1>
+        <div class="roomnames">
+         <p>Periods</p>
+         <p>Pcos/Pcod</p>
+         <p>Girls Talk</p>
+         <p>Hygiene</p>
+         <p>Self Care</p>
+
+        </div>
+
+
+      </div>
+      <div class="rightside">
+        <h1>Enter Room Details</h1>
+        <div class="roomdetails">
+          <form id="post-form" method="POST" action="checkview">
+            {% csrf_token %}
+            <label>Room Name</label>
+            <input type="text" name="room_name" id="room_name" width="100px" />
+            <label>Username</label>
+            <input type="text" name="username" id="username" width="100px" />
+            <input type="submit" value="Enter Room">
+        </form>
+
+        </div>
+       
+
+      </div>
+    </div>
+
+    
 </div>
 
 
