@@ -2,21 +2,24 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{% load static %}
 <style>
 body {
   margin: 0 auto;
   /* max-width: 800px; */
   /* padding: 0 20px; */
-  background: #263238;
+  font-family: sans-serif;
+  background: #45232b;
 }
 
 .container {
   border: 2px solid #263238;
-  background: #263238;
+    background: #a76f7f;
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
     height: 100%;
+
 }
 
 .darker {
@@ -57,11 +60,13 @@ body {
 </head>
 <body>
 
-<div style="text-align: center; background: #546e7a;padding: 1rem;" >
-  <div class="heading" style="background: #455a64;">
+<div style="text-align: center;
+background: #ffa4a4d9;
+padding: 1rem;" >
+  
     <h2 style="color: white; font-size: 2rem;">Lets Chat</h2>
 
-  </div>
+ 
    
 </div>
 
@@ -69,6 +74,7 @@ body {
 
 <div class="container">
     <style>
+     
     input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -82,7 +88,7 @@ body {
 
     input[type=submit] {
     width: 100%;
-    background-color: #263238;;
+   background-color: #e7aaaaed;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -92,7 +98,7 @@ body {
     }
 
     input[type=submit]:hover {
-    background-color:#455a64;
+    background-color:#512632;
     }
 
     div {
@@ -102,51 +108,65 @@ body {
     }
     .chat{
       display: flex;
-      background: #546e7a;
+    background: #f3aeae;
      
     }
     .roomnames, .roomdetails{
-      background: #455a6470;
+      background: transparent;
+    border: 1px solid gray;
     }
     .roomnames p{
       color: white;
-      font-size: 1.5rem;
+    width: 15rem;
+    font-size: 1rem;
+    /* border: 1px solid gray; */
+    padding: 10px 15px;
+    border-radius: 5px;
+    /* text-align: center; */
+    /* margin-left: 8rem; */
       
 
     }
     .roomdetails label{
       color: white;
-      font-size: 1.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
     .leftside{
       flex: 0.5;
     margin: 1rem;
-    border: 2px solid #37474f;
-    background: linear-gradient( hsl(0 0% 0% / 0), hsl(0 0% 0% / 0.3) 20% ,#263238 );
+    border: 2px solid #795548;
+
+    background: linear-gradient( hsl(0 0% 0% / 0), hsl(0 0% 0% / 0.3) 20% ,#68484e );
+
     }
     .rightside{
       flex: 0.5;
     margin: 1rem;
-    border: 2px solid #37474f;
-    background: linear-gradient( hsl(0 0% 0% / 0), hsl(0 0% 0% / 0.3) 20% ,#263238 );
+    border: 2px solid #795548;
+
+    background: linear-gradient( hsl(0 0% 0% / 0), hsl(0 0% 0% / 0.3) 20% ,#68484e );
+
     }
     
     .rightside h1{
       color: white;
+      text-align: center;
     }
     .leftside h1{
       color: white;
+      text-align: center;
     }
     </style>
     <div class="chat">
       <div class="leftside">
         <h1>Rooms</h1>
         <div class="roomnames">
-         <p>Periods</p>
-         <p>Pcos/Pcod</p>
-         <p>Girls Talk</p>
-         <p>Hygiene</p>
-         <p>Self Care</p>
+         <p> <img style="width: 2rem;" src="https://i.pinimg.com/originals/01/1c/ae/011cae25aa495607f8dc2a0ddaeb6372.png" alt=""> Periods</p>
+         <p> <img style="width: 2rem;" src="https://i.pinimg.com/originals/01/1c/ae/011cae25aa495607f8dc2a0ddaeb6372.png" alt=""> Pcos/Pcod</p>
+         <p><img style="width: 2rem;" src="https://i.pinimg.com/originals/01/1c/ae/011cae25aa495607f8dc2a0ddaeb6372.png" alt=""> Girls Talk</p>
+         <p><img style="width: 2rem;" src="https://i.pinimg.com/originals/01/1c/ae/011cae25aa495607f8dc2a0ddaeb6372.png" alt=""> Hygiene</p>
+         <p><img style="width: 2rem;" src="https://i.pinimg.com/originals/01/1c/ae/011cae25aa495607f8dc2a0ddaeb6372.png" alt=""> Self Care</p>
 
         </div>
 
